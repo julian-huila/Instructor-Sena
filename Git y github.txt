@@ -1,0 +1,58 @@
+
+
+GIT — Control de versiones local
+Es un sistema de control de versiones distribuido, creado por Linus Torvalds en 2005. Funciona completamente en tu máquina local — no necesita internet ni ningún servidor externo. Su función es rastrear los cambios que haces en los archivos de un proyecto a lo largo del tiempo, permitiéndote volver a versiones anteriores, trabajar en ramas paralelas y fusionar cambios. Es una herramienta de línea de comandos que vive en tu computadora.
+
+Repositorio (repo): carpeta donde Git rastrea todos los cambios de tu proyecto. Se inicializa con git init.
+
+git init                    # inicializar repositorio -una vez
+git clone <url>             # copiar un repo remoto -- depende proyecto
+git status                  # ver qué archivos cambiaron -- a cada segundo
+git add (.) -> Todo                   # agregar todos los cambios al stage -- depende del cambio
+git commit -m "mensaje"     # guardar snapshot con descripción -- depende del cambio
+--git log                     # historial de commits -- depende
+--git branch nombre           # crear rama -- depende del proyecto
+git checkout nombre         # cambiar de rama --cuando pasen a producción
+git merge nombre            # fusionar rama al branch actual -- paso a producción
+git pull                    # traer cambios del remoto -- una vez
+git push                    # subir cambios al remoto --cambio a producción
+
+
+GITHUB
+
+Es una plataforma web que usa Git por debajo. Es un servicio en la nube donde puedes alojar repositorios Git de forma remota, colaborar con otros desarrolladores, revisar código mediante Pull Requests, reportar bugs con Issues y automatizar flujos de trabajo con GitHub Actions. Es propiedad de Microsoft desde 2018.
+
+Remote: versión del repositorio alojada en la nube (GitHub, GitLab, Bitbucket). Permite colaborar con otros y tener respaldo del código.
+
+Fork: copia de un repositorio ajeno en tu cuenta. Útil para contribuir a proyectos open source sin tener permisos directos.
+Pull Request (PR): solicitud para fusionar cambios de una rama o fork al repositorio principal. Es el mecanismo central de revisión de código en equipos.
+Issues: sistema de seguimiento de tareas, bugs y mejoras dentro de un repositorio.
+Actions: sistema de CI/CD integrado en GitHub. Permite automatizar pruebas, builds y despliegues cada vez que se hace push o se abre un PR.
+.gitignore: archivo que le dice a Git qué archivos ignorar (node_modules, .env, archivos compilados, etc.).
+merge: confirmar cambios
+
+main (producción)
+  └── develop (integración)
+        ├── feature/login
+        ├── feature/dashboard
+        └── fix/bug-formulario
+   !__stage
+	L____nombre archviso
+
+----
+------------------------------
+
+Git es la herramienta, GitHub es el servicio. Puedes usar Git sin GitHub perfectamente — solo trabajas en local. Pero no puedes usar GitHub sin Git, porque GitHub es simplemente una interfaz visual y un servidor remoto construido sobre Git.
+
+
+
+Linux
+cd nombre carpeta
+cd .. me devuelvo
+ls listo todo
+pwd -- me dice donde estoy parado
+
+
+
+
+
